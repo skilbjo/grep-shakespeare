@@ -1,0 +1,22 @@
+{
+  "name": "grep-shakespeare",
+  "main": "app.js",
+  "version": "0.0.1",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skilbjo/grep-shakespeare.git"
+  },
+  "engines": {
+    "node": "5.4.1"
+  },
+  "dependencies": {
+    "underscore": "1.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "1.2.1" 
+  },
+  "jshintConfig": {
+    "laxcomma": true
+  }
+}
