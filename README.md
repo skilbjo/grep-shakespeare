@@ -15,4 +15,4 @@ Resulting data structure is `json`:
 - `http://www.gutenberg.org/cache/epub/100/pg100.txt`
 
 ## Useful commands 
-head -n 500 pg100.txt >> sample.txt
+- `head -n 500 pg100.txt >> sample.txt`
