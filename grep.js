@@ -15,7 +15,7 @@ var strip = function(arr){
 var add = function(words,cb){
 	words.map(function(word,iterator){
 		if (!out[word]) {
-			out[word] = 1
+			out[word] = 1;
 		} else {
 			out[word]+=out[word];
 		}		
@@ -48,7 +48,7 @@ extract(shakespeare,function(line){
 	transform(line,function(words){
 		add(words,function(){
 			// console.log(out);			
-		})
+		});
 	});
 });
 
