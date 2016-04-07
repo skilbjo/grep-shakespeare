@@ -17,16 +17,10 @@ def load(row):
 	map(lambda x: add(x), row)
 
 def add(word):
-	print(word)
 	if word in out:
 		out[word] += 1
 	else:
-		out[word] = 0
-	  # out[word] = out.get(word, 0) + 1
-	# if !out[word]:
-	# 	out[word] = 1
-	# else:
-	# 	out[word] += out[word]
+		out[word] = 1
 
 def strip(word):
 	return re.sub('[^A-Za-z]', '', word.lower())
@@ -36,11 +30,4 @@ def open_file(file):
 		extract(f)
 
 open_file(shakeseare)
-
-# def add(word):
-# 	if !out[word]:
-# 		out[word] = 1
-# 	else:
-# 		out[word] += out[word]
-
-# print(out)
+print(out)
