@@ -20,12 +20,14 @@ function transform {
 }
 
 function load {
+	# http://www.linuxjournal.com/content/bash-associative-arrays
 	# add each key to 
 	echo load
 	print
 }
 
 function print {
+	# http://stackoverflow.com/questions/3112687/how-to-iterate-over-associative-array-in-bash
 	for i in "${!out[@]}"; do
 		echo "{ $i : ${out[$i]} }"
 	done
