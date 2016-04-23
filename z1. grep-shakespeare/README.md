@@ -1,6 +1,10 @@
 # grep shakespeare
 
-Grep Shakespeare in `node.js`, `python`, and pure `bash`
+Grep Shakespeare in `node.js`, `python`, and pure `bash`.
+
+## Problem
+
+Read the Shakespearian texts, and return every unique word with the number of occurances.
 
 Resulting data structure is `json`:
 

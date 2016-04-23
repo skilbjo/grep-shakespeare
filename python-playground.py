@@ -1,5 +1,9 @@
-items = [1,2,3,4,5]
+# items = [1,2,3,4,5]
 
-def sqr(x): return x**2
+# def sqr(x): return x**2
 
-print list(map(sqr,items))
+# print list(map(sqr,items))
+
+hello= 'hello world'
+
+print(hello)

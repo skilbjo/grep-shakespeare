@@ -1,6 +1,6 @@
 import re
 
-shakeseare = './data/pg100.txt'
+shakeseare = './../data/pg100.txt'
 out = dict()
 
 def extract(file):

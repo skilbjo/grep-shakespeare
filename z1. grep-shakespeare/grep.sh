@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## Variable assignment
-shakespeare="data/sample.txt"
+shakespeare="./../data/sample.txt"
 out="${array[@]}"
 
 ## Function declaration
