@@ -1,8 +1,17 @@
+/*
+Binary Search Algorithm
+https://en.wikipedia.org/wiki/Binary_search_algorithm
+runtime: O(log n)
+constraint: list must be sorted
+*/
 
 var data_store = [ 1, 2, 3 ],
-	unordered = [ 67, 324, 123, 1, 3 ]
+	large_data_store = []
 	;
 
+for(var i = 1; i< 1000; i++){
+	large_data_store.push(i);
+}
 
 var binarySearch = function(item,data_store) {
 	var first = 0,
@@ -11,7 +20,7 @@ var binarySearch = function(item,data_store) {
 		;
 
 	while (first <= last && !found){
-		var midpoint = (first+last)/2;
+		var midpoint = (first+last)/2 | 0;
 		if (data_store[midpoint] == item) { found = true; }
 		else {
 			if (item < data_store[midpoint]) {
@@ -25,7 +34,7 @@ var binarySearch = function(item,data_store) {
 };
 
 console.log(
-binarySearch( 67 , unordered)
+	binarySearch( 670 , large_data_store)
 );
 
 

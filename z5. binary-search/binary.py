@@ -1,7 +1,11 @@
-
+'''
+Binary Search Algorithm
+https://en.wikipedia.org/wiki/Binary_search_algorithm
+runtime: O(log n)
+constraint: list must be sorted
+'''
 data_store = [ 1, 2, 3 ]
-unordered = [ 67, 324, 123, 1, 3 ]
-
+large_data_store = [n for n in range(1000)]
 
 def binarySearch(item,data_store):
 	first = 0
@@ -19,8 +23,6 @@ def binarySearch(item,data_store):
 				first = midpoint + 1
 	return found
 
-print(
-binarySearch( 67 , unordered)
-)
+print( binarySearch( 67 , large_data_store) )
 
 
