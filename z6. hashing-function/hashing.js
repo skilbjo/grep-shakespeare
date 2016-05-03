@@ -21,7 +21,7 @@ var fn_bucket = function(str){
 // set value inside hash table =>
 var hash = function(input, data_store){
 	var bucket = fn_bucket(input);
-	data_store[bucket].push({
+	return data_store[bucket].push({
 		'key': input
 	});
 };
