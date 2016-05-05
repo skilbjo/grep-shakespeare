@@ -1,4 +1,8 @@
-
+/*
+Hash Tables
+https://en.wikipedia.org/wiki/Hash_table
+time-complexity: O(1)
+*/
 var data_store = [ ],
 	buckets = 4
 	;

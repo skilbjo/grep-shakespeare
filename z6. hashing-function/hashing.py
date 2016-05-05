@@ -1,3 +1,9 @@
+'''
+Hash Tables
+https://en.wikipedia.org/wiki/Hash_table
+time-complexity: O(1)
+'''
+
 data_store = []
 buckets = 4
 node = { 

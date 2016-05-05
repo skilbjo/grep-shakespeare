@@ -21,7 +21,7 @@ def merge_sort(list):
 		else:
 			sorted_list.append(left[i])
 			i+=1
-
+b
 	sorted_list+=left[i:]
 	sorted_list+=right[j:]
 

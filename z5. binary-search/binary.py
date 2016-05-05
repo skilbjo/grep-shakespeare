@@ -1,7 +1,7 @@
 '''
 Binary Search Algorithm
 https://en.wikipedia.org/wiki/Binary_search_algorithm
-runtime: O(log n)
+time-complexity: O(log n)
 constraint: list must be sorted
 '''
 data_store = [ 1, 2, 3 ]
