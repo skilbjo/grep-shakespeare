@@ -1,4 +1,4 @@
-var longest_flat = function(arr) {
+var lngst_flt = function(arr) {
 	var series = 1, longest = 0;
 
 	arr.map(function(num,iterator){
@@ -21,9 +21,9 @@ var longest_flat = function(arr) {
 	return longest;
 };
 
-var testInput1 = longest_flat([1,1,1]),
-	testInput2 = longest_flat([1,1,2,2,2]),
-	testInput3 = longest_flat([1,1,2,2,2,2])
+var testInput1 = lngst_flt([1,1,1]),
+	testInput2 = lngst_flt([1,1,2,2,2]),
+	testInput3 = lngst_flt([1,1,2,2,2,2])
 	;
 
 

@@ -1,4 +1,4 @@
-var nearest_power_of_two = function(n) {
+var nrst_pwr_of_2 = function(n) {
 	var nearest = 2;
 
 	for(var i = 2; i <= n; i++){
@@ -10,9 +10,9 @@ var nearest_power_of_two = function(n) {
 	}
 };
 
-var testInput1 = nearest_power_of_two(10)
-	,testInput2 = nearest_power_of_two(2)
-	,testInput3 = nearest_power_of_two(100)
+var testInput1 = nrst_pwr_of_2(10)
+	,testInput2 = nrst_pwr_of_2(2)
+	,testInput3 = nrst_pwr_of_2(100)
 	;
 
 

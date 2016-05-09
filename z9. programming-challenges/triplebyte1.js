@@ -1,4 +1,4 @@
-var interleave = function(str1, str2) {
+var ntrlv = function(str1, str2) {
 	str1 = str1.split(''), str2 = str2.split('');
 
 	var result = [];
@@ -11,8 +11,8 @@ var interleave = function(str1, str2) {
 	return result.join('');
 };
 
-var testInput1 = interleave('123','abc'),
-	testInput2 = interleave('4567','d')
+var testInput1 = ntrlv('123','abc'),
+	testInput2 = ntrlv('4567','d')
 	;
 
 

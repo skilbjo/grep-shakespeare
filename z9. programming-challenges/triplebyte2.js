@@ -1,5 +1,5 @@
-var longest_palindromic_substring = function(str) {
-	var check_palindrome = function(string){
+var lngst_plndrmic_substring = function(str) {
+	var chck_plndrme = function(string){
 		for(var i=0; i< Math.floor(string.length/2); i++){
 			if(string[i] != string[string.length - 1 - i]){
 				return false;
@@ -11,22 +11,22 @@ var longest_palindromic_substring = function(str) {
 	str = str.split('');
 
 	var attempt = '',
-		palindrome_length = 0;
+		plndrme_length = 0;
 
 	str.map(function(char,iterator){
 		attempt+=char;
-		if( check_palindrome(attempt) ){
-			palindrome_length+=1;
+		if( chck_plndrme(attempt) ){
+			plndrme_length+=1;
 		}
 	});
 
-	return palindrome_length;
+	return plndrme_length;
 
 };
 
-var testInput1 = longest_palindromic_substring('abba'),
-	testInput2 = longest_palindromic_substring('bobcat'),
-	testInput3 = longest_palindromic_substring('acyclic')
+var testInput1 = lngst_plndrmic_substring('abba'),
+	testInput2 = lngst_plndrmic_substring('bobcat'),
+	testInput3 = lngst_plndrmic_substring('acyclic')
 	;
 
 
