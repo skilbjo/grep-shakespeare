@@ -12,7 +12,7 @@ var calc = function(curr,rest,target){
 	}
 
 	while(rest){
-		curr	+= 	rest.slice(0,1),
+		curr	+= 	rest.slice(0,1);
 		rest	=		rest.slice(1);
 		calc(curr, rest, target);
 	}
@@ -20,5 +20,5 @@ var calc = function(curr,rest,target){
 
 
 // console.log(
-	calc('',numbers,sum)
+	calc('',numbers,sum);
 // );

@@ -2,7 +2,7 @@
 	given a string, write the combination sequences of single integers that equal the target sum
 */
 
-var numbers = "11162542",
+var numbers = "123456789",
 	sum = 10
 	;
 

@@ -10,8 +10,8 @@ var n = 5,
 	;
 
 var spiral = function(n){
-	var result = []
-		center = n%2 != 0 ? (n+1) / 2 : n/2;
+	var result = [];
+		center = n%2 !== 0 ? (n+1) / 2 : n/2;
 
 	console.log(center); 
 
@@ -19,9 +19,9 @@ var spiral = function(n){
 		var record = [];
 		for(var field = 1; field <= n; field++){
 			if(row == center && field == center){
-				record.push(symbol)
+				record.push(symbol);
 			} else {
-				record.push('')
+				record.push('');
 			}
 		}
 		result.push(record);
