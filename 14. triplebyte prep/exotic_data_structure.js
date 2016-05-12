@@ -1,4 +1,5 @@
-
+// http://www.i-programmer.info/programming/javascript/5328-javascript-data-structures-the-linked-list.html?start=1
+// http://code.tutsplus.com/articles/data-structures-with-javascript-singly-linked-list-and-doubly-linked-list--cms-23392
 
 var Node = function(data){
 	this.data = data;
