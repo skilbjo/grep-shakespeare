@@ -11,7 +11,7 @@ var primes = function(start,end){
 
 	for(var i = start; i <= end; i++){
 		for(var j = 2; j < i; j++){
-			if( (!(i % j === 0)) ){
+			if( ((i % j !== 0)) ){
 				if( /* check the 2 and 4 example */ ){ // while or if??
 					result[i] = 'prime';
 				}
