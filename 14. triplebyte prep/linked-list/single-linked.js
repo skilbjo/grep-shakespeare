@@ -31,7 +31,7 @@ singleLinkedList.prototype.add = function(val){
 	this._length++;
 
 	return node;
-}
+};
 
 singleLinkedList.prototype.searchNodeAt = function(position) {
 	var currentNode = this.head,
@@ -45,7 +45,7 @@ singleLinkedList.prototype.searchNodeAt = function(position) {
 	}
 	while(count < position){
 		currentNode = currentNode.next;
-		count++
+		count++;
 	}
 
 	return currentNode;
