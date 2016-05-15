@@ -9,28 +9,29 @@ var arr = [5,4,4,3,9,1];
 var findDupe = function(arr){
 	arr.sort();
 
-	for(var index in arr){
-		if(index+1 > arr.length){
+	return arr.filter(function(num,iterator){
+		if (iterator+1 == arr.length){
 			return;
 		} else {
-			if(arr[index+1] == arr[index]){
-
-				return arr[index];
+			if( arr[iterator+1] == num) {
+				return num;
 			}
 		}
-		// if()
-	}
+	});
 
-	// return arr.filter(function(num,iterator){
-	// 	if (iterator+1 == arr.length){
+	// for(var index in arr){
+	// 	if(index+1 == arr.length){
 	// 		return;
 	// 	} else {
-	// 		if( arr[iterator+1] == num) {
-	// 			return num;
+	// 		console.log(arr[index]);
+	// 		if(arr[index+1] == arr[index]){
+	// 			console.log(arr[index]);
+	// 			return arr[index];
 	// 		}
 	// 	}
-	// });
-	
+	// }
+
+
 	// arr.forEach(function(num,iterator){
 	// 	if (iterator+1 == arr.length){
 	// 		return;

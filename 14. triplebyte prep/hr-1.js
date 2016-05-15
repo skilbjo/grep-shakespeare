@@ -5,7 +5,7 @@
 */
 
 var detectNetwork = function(cardNumber) {
-	var IIN = ((cardNumber+'').slice(0,2))*1
+	var IIN = ((cardNumber+'').slice(0,2))*1,
 		network = ''
 		;
 
@@ -21,8 +21,7 @@ var detectNetwork = function(cardNumber) {
 	}
 
 	return network;
-  // Return the card network for given card number.
-}
+};
 
 console.log(
 	detectNetwork(3803132132)

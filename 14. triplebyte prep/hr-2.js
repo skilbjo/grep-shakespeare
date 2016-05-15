@@ -1,13 +1,3 @@
-
-
-// use this function to return an array of all the company names founded last century
-var collectCompaniesFoundedLastCentury = function (companies) {
-}
-
-// use this function to return an array of all the company names that raised 20 million dollars or more
-var collectTwentyMillionDollarCompanies = function (companies) {
-}
-
 var companies = [
   {
     "name" : "AdventNet",
@@ -66,4 +56,30 @@ var companies = [
     "total_money_raised" : "$18.5M"
   }
 ];
+
+// use this function to return an array of all the company names founded last century
+var collectCompaniesFoundedLastCentury = function (companies) {
+  return companies.filter(function(company){
+    return company['founded_year'] > 2000;
+  }).map(function(company){
+    return company['name'];
+  });
+};
+
+// use this function to return an array of all the company names that raised 20 million dollars or more
+var collectTwentyMillionDollarCompanies = function (companies) {
+  return companies.filter(function(company){
+    return company['total_money_raised'].slice(1).slice(-1) == 'M' && parseInt(company['total_money_raised'].slice(1)) > 20;
+  }).map(function(company){
+    return company.name;
+  });
+};
+
+console.log(
+  '$20m+ companies: ',collectTwentyMillionDollarCompanies(companies)
+);
+
+console.log(
+  'Companies founded in the 2000s: ',collectCompaniesFoundedLastCentury(companies)
+);
 
