@@ -13,7 +13,9 @@
   "dependencies": {
     "underscore": "1.8.3",
     "prompt": "latest",
-    "colors": "latest"
+    "colors": "latest",
+    "clivas":"latest",
+    "keypress":"latest"
   },
   "devDependencies": {
     "nodemon": "1.2.1" 
