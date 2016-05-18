@@ -72,7 +72,7 @@
 			group by
 				p.market_name
 		) src
-		order by Rank desc
+		order by Approved_Rank desc
 
 -- 3. Rank the markets by average salary for the interview requests placed in 2015
 ------------------------------
