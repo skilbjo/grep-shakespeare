@@ -1,22 +1,12 @@
-var input = 'hello';
-
-var charcode = function(str){
-	return str.split('').map(function(char){
-		return char.charCodeAt();
-	}).reduce(function(prev,cur){
-		return prev+cur;
-	});
+var iterative_fib_arr = function(n){
+	// var arr = new Array(n);
+	var arr = Array.apply(null, Array(n));
+	return arr.reduce(function(prev,cur,iterator){
+		if(iterator - 2 <= 0) return 0;
+		return prev + (iterator - 2) + (iterator - 1);
+	},0);
 };
 
-// console.log(
-// 	charcode.apply(String,input)
-// 	);
-
 console.log(
-	charcode(input)
-	);
-
-
-// console.log(
-// 	'hi'.charCodeAt(1)
-// 	);
+	iterative_fib_arr(7)
+);

@@ -1,11 +1,36 @@
 // Recursive
-
 var recursive_fib = function(n){
 	if(n<=1) return n;
 	return recursive_fib(n-2) + recursive_fib(n-1);
 };
 
-var recursive_memo_fib1 = (function(){
+// Recursive w/ memoization (caching)
+var recursive_memo_fib = function(n){
+	recursive_memo_fib_f()
+}
+
+var recursive_memo_fib_f = function(n,cache){
+	if( cache[n] ) {
+		return cache[n];
+	} else {
+		if(n<=2) return cache[n];
+		// var left 	= n - 1 	>= 3 ? recursive_memo_fib(n-1,cache)[n-1] : recursive_memo_fib(n-1,cache);
+		// var right = recursive_memo_fib(n-2,cache);
+		// console.log('n - 2 is:',n-2,'left: ',right);	
+		// cache[n] = left+right;
+		cache[n] = ( (n-1>=3 ? recursive_memo_fib(n-1,cache)[n-1] : recursive_memo_fib(n-1,cache) ) + // 3 => 2
+								recursive_memo_fib(n-2,cache) 	// 2 => 1  ==> 3
+		);
+		return cache;
+	}
+};
+
+console.log(
+	recursive_memo_fib(100,{0:0,1:1,2:1})[100]
+);
+
+
+var recursive_memo_fib_take1 = (function(){
 	var memo = [0,1];
 	var fib = function(n){
 		var result = memo[n];
@@ -17,32 +42,32 @@ var recursive_memo_fib1 = (function(){
 	return fib;
 }());
 
-var recursive_memo_fib2 = function(n,cache){
-	if(cache[n]) {
-		return cache[n];
-	} else {
-		cache[n] = recursive_memo_fib(n-2) + recursive_memo_fib(n-1);	
-		if(n<=2) return n;
-		return;
-	}
-};
-
 var iterative_fib = function(n){
-	var first = 0, second = 1, fib = 1;
+	var fib = 0;
 	for(var i=2; i<=n;i++){
-		fib = first + second;
-		first = second;
-		second = fib;
+		fib = (i-2) + (i-1);
 	}
 	return fib;
 };
 
-console.log(
-	'Recursive: ',recursive_fib(7)+'\n'+
-	'1st Memoization Recursive: ',recursive_memo_fib1(7)+'\n'+
-	'2nd Memoization Recursive: ',recursive_memo_fib1(7)+'\n'+	
-	'Iterative: ',iterative_fib(7)
-);
+var iterative_fib_arr = function(n){
+	var arr = Array.apply(null, Array(n));
+	return arr.reduce(function(prev,cur,iterator){
+		if(iterator - 2 <= 0) return 0;
+		return prev + (iterator - 2) + (iterator - 1);
+	},0);
+};
+
+// console.log(
+// 	iterative_fib_arr(7)
+// );
+
+// console.log(
+// 	'Recursive: ',recursive_fib(7)+'\n'+
+// 	'1st Memoization Recursive: ',recursive_memo_fib(7,{0:0,1:1,2:2})+'\n'+
+// 	'2nd Memoization Recursive: ',recursive_memo_fib_take1(7)+'\n'+	
+// 	'Iterative: ',iterative_fib(7)
+// );
 
 
 
