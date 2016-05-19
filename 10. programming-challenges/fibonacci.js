@@ -6,10 +6,10 @@ var recursive_fib = function(n){
 
 // Recursive w/ memoization (caching)
 var recursive_memo_fib = function(n){
-	recursive_memo_fib_f()
-}
+	return f_recursive_memo_fib(n,{0:0,1:1,2:1})[n];
+};
 
-var recursive_memo_fib_f = function(n,cache){
+var f_recursive_memo_fib = function(n,cache){
 	if( cache[n] ) {
 		return cache[n];
 	} else {
@@ -18,15 +18,15 @@ var recursive_memo_fib_f = function(n,cache){
 		// var right = recursive_memo_fib(n-2,cache);
 		// console.log('n - 2 is:',n-2,'left: ',right);	
 		// cache[n] = left+right;
-		cache[n] = ( (n-1>=3 ? recursive_memo_fib(n-1,cache)[n-1] : recursive_memo_fib(n-1,cache) ) + // 3 => 2
-								recursive_memo_fib(n-2,cache) 	// 2 => 1  ==> 3
+		cache[n] = ( (n-1>=3 ? f_recursive_memo_fib(n-1,cache)[n-1] : f_recursive_memo_fib(n-1,cache) ) + // 3 => 2
+								f_recursive_memo_fib(n-2,cache) 	// 2 => 1  ==> 3
 		);
 		return cache;
 	}
 };
 
 console.log(
-	recursive_memo_fib(100,{0:0,1:1,2:1})[100]
+	recursive_memo_fib(7)
 );
 
 
