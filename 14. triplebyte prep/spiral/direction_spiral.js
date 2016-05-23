@@ -1,27 +1,19 @@
 var mark = '*',
-	n = 8,
-	create_arr = function(n){
-		var arr = [];
-		for(var row=0; row < n; row++){
-			var line = [];
-			for(var field=0; field < n; field++){
-				line.push(' ');
-			}
-			arr.push(line);
-		}
-		return arr;
-	},
-	arr = create_arr(n),
-	textify = function(){
-	var result = '';
-	for(var row=0; row<= arr.length-1; row++){
-		for(var col=0; col<= arr.length-1; col++){
-			result+=arr[row][col];
-		}
-		result+='\n';
-	}
-	return result;
-};
+// 	arr = [
+// 	['','','',''],
+// 	['','','',''],	
+// 	['','','',''],
+// 	['','','','']	
+// ];
+	arr = [
+	['','','','','','',''],
+	['','','','','','',''],	
+	['','','','','','',''],
+	['','','','','','',''],	
+	['','','','','','',''],	
+	['','','','','','',''],	
+	['','','','','','',''],			
+];
 
 var draw_at_position = function(row,col){
 	arr[row][col] = mark;
@@ -65,21 +57,30 @@ var spiral = function(n){
 	}
 
 	while(counter >= 0){
+		// console.log(arr);
 		next = draw_line( next , counter, directions.pop() );
 		counter--;
 	}
 	draw_line( next , counter+2, directions.pop() );	
+
 };
 
+spiral(7);
 
-var f = function(n){
-	console.log('function f called with parameter: ',n);
-	console.log('answer:');
-	spiral(n);
-	console.log(textify());
-};
+// var start = draw_line([0,0], arr.length - 1, 'R');
+// draw_line(start, arr.length-1, 'D');
+// draw_line([0,arr.length-1], arr.length-1, 'D');
 
-f(n);
 
+// console.log(
+// start
+// 	);
+// console.log(
+// 	draw_line([1,1], 1, 'U')
+// );
+
+console.log(
+	arr
+);
 
 
