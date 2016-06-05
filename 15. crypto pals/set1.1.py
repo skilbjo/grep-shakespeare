@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import base64
 
 def convert_hex_base64(string):
@@ -6,6 +7,8 @@ def convert_hex_base64(string):
 	return base_sixfour.decode()
 
 def test(fn,goal,target):
+	print('goal: ',goal)
+	print('target: ',target)
 	if( fn(goal) == target):
 		print('passed!')
 	else:
