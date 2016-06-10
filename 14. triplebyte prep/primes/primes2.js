@@ -1,4 +1,4 @@
-var range = [490,510],
+var range = [1,20],
 	start = range[0],
 	end = range[1]
 	;
