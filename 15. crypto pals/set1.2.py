@@ -6,13 +6,13 @@ def fixed_xor(string,xor):
 	hex = bytes.fromhex(string)
 	xor = bytes.fromhex(xor)
 	xor_d = ''
-	xor_dd = 0
+	xor_dd = ''
 
 	for char1,char2 in zip(hex,xor):
 		xor_d += chr( ord( chr(char1) ) ^ ord( chr(char2) ) )
 
+	print(xor_d)
 	xor_dd = str(binascii.hexlify(xor_d.encode('utf-8')),'ascii')
-	
 	return xor_dd
 
 def test(fn,goal,xor,target):
